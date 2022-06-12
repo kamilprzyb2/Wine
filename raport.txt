@@ -1,4 +1,5 @@
-W powyższym programie przedstawiliśmy cały proces obróbki danych, pobranych ze strony internetowej. Do tego zadania wybraliśmy zestaw win, w którym na podstawie:
+W powyższym programie przedstawiliśmy cały proces obróbki danych, pobranych ze strony internetowej. 
+Do tego zadania wybraliśmy zestaw win, w którym na podstawie:
 
 - kwasowości stałej,
 - kwasowości lotnej,
@@ -12,14 +13,18 @@ W powyższym programie przedstawiliśmy cały proces obróbki danych, pobranych 
 - siarczanów
 - i zawartości alkoholu,
 
-ocenialiśmy jakość wina. Początkowo wartość ta była w skali od 3 do 8, jednak po wstępnej analizie uznaliśmy, że lepszym sposobem na trafne określenie jakości wina będą wartości binarne 0 - 1. Na wykresach pudełkowych zostały 
-pokazane poszczególne statystyki dla każdego z parametrów, a po usunięciu wartości odstających, te same danezostały ukazane na histogramach. Najciekawszym zjawiskiem zaszczyciła nas macierz koleracji, 
-która nikogo nie zaskoczyła, a wręcz utwierdziła nas w przekonaniu, że największy wpływ na jakość wina ma zawartość alkoholu. Drugim czynnikiem, najbardziej wpływającym na jakość wina jest ilość siarczanów, 
-co wbrew pozorom nie jest niczym dziwnym z uwagi na fakt, iż dodawanie minimalnych ilości siarki jako konserwantu w trakcie procesu produkcji wina, jest w rzeczywistości absolutnie standardową procedurą, 
-która pozwala zapobiec przedwczesnemu obniżeniu się jakości wina. Parametry związane z kwasowością mają odwrotnie proporcjonalny, do poprzednich, wpływ na oceny jakości wina, natomiast
-minimalny, a wręcz zerowy wpływ mają takie wartości jak pH, cukier resztkowy, czy chociażby wolny dwutlenek siarki, 
-co poskutkowało decyzją o pozbyciu się tych kolumn na czas trenowania modelu. Do trenowania modeli postanowiliśmy użyć czterech różnych klasyfikatorów z różnymi modyfikatorami, aby sprawdzić, który
-najlepiej poradzi sobie z naszym zadaniem. Po kilku próbach doszliśmy do wniosku, że najlepsze wyniki, w przypadku naszego projektu osiąga model Random Forest Tree.
+ocenialiśmy jakość wina. Początkowo wartośći w zbiorze danych zawierały się głównie w przedziale między 3 a 8, jednak po wstępnej analizie uznaliśmy, że lepszym sposobem na trafne określenie jakości wina będzie zastosowanie 
+klasyfikacji binarnej, i oceniania wina w skali 0 - 1 (1 - 5, 6 - 10 według poprzedniej skali), gdzie 0 to złej, a 1 to dobrej jakości wino.
+Na wykresach pudełkowych zostały pokazane poszczególne statystyki dla każdego z parametrów, a po usunięciu wartości odstających, te same dane zostały ukazane na histogramach. 
+
+Najciekawszym zjawiskiem zaszczyciła nas macierz koleracji, która nikogo nie zaskoczyła, a wręcz utwierdziła nas w przekonaniu, że największy wpływ na jakość wina ma zawartość alkoholu. 
+Drugim czynnikiem, najbardziej wpływającym na jakość wina jest ilość siarczanów, co wbrew pozorom nie jest niczym dziwnym z uwagi na fakt, iż dodawanie minimalnych ilości siarki jako konserwantu w trakcie procesu produkcji wina, 
+jest w rzeczywistości absolutnie standardową procedurą, która pozwala zapobiec przedwczesnemu obniżeniu się jakości wina. 
+
+Parametry związane z kwasowością mają odwrotnie proporcjonalny, do poprzednich, wpływ na oceny jakości wina, natomiast minimalny, a wręcz zerowy wpływ mają takie wartości jak pH, cukier resztkowy, 
+czy chociażby wolny dwutlenek siarki, co poskutkowało decyzją o pozbyciu się tych kolumn na czas trenowania modelu. Do trenowania modeli postanowiliśmy użyć czterech różnych klasyfikatorów z różnymi modyfikatorami, 
+aby sprawdzić, który najlepiej poradzi sobie z naszym zadaniem. Po kilku próbach doszliśmy do wniosku, że najlepsze wyniki, w przypadku naszego projektu osiąga model Random Forest Tree.
+
 Podsumowując, powyższa analiza pomogła nam okreslić kluczowe parametry, mające wpływ na jakość wina, czyli zawartość alkoholu oraz siarczanów. Głównie na podstawie tych wartości program nauczył się z około 80% skutecznością
 poprawnie oceniać jakość wina.
 
